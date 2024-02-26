@@ -1,0 +1,25 @@
+main {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 50px auto;
+  align-items: center;
+  justify-content: space-around;
+}
+
+table {
+  margin-top: 50px;
+  text-align: center;
+}
+
+table,
+th,
+td {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+th,
+td {
+  padding: 5px;
+}

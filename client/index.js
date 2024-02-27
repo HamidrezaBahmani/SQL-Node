@@ -36,14 +36,18 @@ function handleEditRow(id) {
 }
 
 updateBtn.onclick = function () {
+  const updatebtn = document.querySelector("#update-row-btn");
   const updatedNameInput = document.querySelector("#update-name-input");
-  fetch("http://localhost:5000/update", {
+  console.log(updatedNameInput.value);
+  console.log(updatebtn.dataset.id);
+
+  fetch("http://localhost:5000/update/", {
     method: "PATCH",
     headers: {
       "Content-type": "application/json",
     },
     body: JSON.stringify({
-      id: updatedNameInput.dataset.id,
+      id: updatebtn.dataset.id,
       name: updatedNameInput.value,
     }),
   })

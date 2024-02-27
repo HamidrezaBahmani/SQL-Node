@@ -83,6 +83,7 @@ class dbService {
         const query = "UPDATE names SET name = ? WHERE id = ?";
         connection.query(query, [name, id], (err, result) => {
           if (err) reject(new Error(err.message));
+          console.log(result);
           resolve(result.affectedRows);
         });
       });
